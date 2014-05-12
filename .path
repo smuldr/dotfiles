@@ -1,0 +1,12 @@
+# add Android Development Tools to path
+export PATH=${PATH}:"/Applications/Android Studio.app/sdk/tools/":"/Applications/Android Studio.app/sdk/platform-tools/"
+
+# Eclipse
+export PATH=${PATH}:"/Users/steven/Applications/eclipse/"
+
+# Sonar
+export PATH=${PATH}:"/Users/steven/Applications/sonarqube-4.1/bin/macosx-universal-64/"
+export PATH=${PATH}:"/Users/steven/Applications/sonar-runner-2.3/bin/"
+
+# Java home
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/"
