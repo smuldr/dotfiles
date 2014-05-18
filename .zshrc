@@ -54,7 +54,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/opt/android-studio/sdk/platform-tools:/opt/android-studio/sdk/tools:/opt/android-studio/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -72,3 +71,15 @@ export PATH="/opt/android-studio/sdk/platform-tools:/opt/android-studio/sdk/tool
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Added after suggestion from brew
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
+
+# Useful stuff from original dotfiles repo by mathiasbynens
+source .path
+source .exports
+source .aliases
+source .functions
+# source .extra
