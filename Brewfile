@@ -11,8 +11,8 @@ install coreutils
 install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 install findutils
-# Install Bash 4
-install bash
+# Install ZSH
+install zsh
 
 # Install wget with IRI support
 install wget --enable-iri
@@ -47,6 +47,7 @@ install zopfli
 install p7zip
 
 install homebrew/versions/lua52
+install caskroom/cask/brew-cask
 
 # Remove outdated versions from the cellar
 cleanup
