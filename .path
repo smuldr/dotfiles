@@ -1,12 +1,17 @@
-# add Android Development Tools to path
-export PATH=${PATH}:"/Applications/Android Studio.app/sdk/tools/":"/Applications/Android Studio.app/sdk/platform-tools/"
+# Ubuntu path
+if [[ `uname` == 'Linux' ]]	then
+	export PATH=${PATH}:"$HOME/bin"
+	export PATH=${PATH}:"/opt/android-studio/sdk/platform-tools:/opt/android-studio/sdk/tools:/opt/android-studio/bin:"
+	export PATH=${PATH}:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:"
+	export PATH=${PATH}:"/usr/games:/usr/local/games"
+fi
 
-# Eclipse
-export PATH=${PATH}:"/Users/steven/Applications/eclipse/"
+# OS X path
+if [[ `uname` == 'Linux' ]]	then
+	export PATH=${PATH}:"/Applications/Android Studio.app/sdk/tools/":"/Applications/Android Studio.app/sdk/platform-tools/"
+	export PATH=${PATH}:"/Users/steven/Applications/eclipse/"
+	export PATH=${PATH}:"/Users/steven/Applications/sonarqube-4.1/bin/macosx-universal-64/"
+	export PATH=${PATH}:"/Users/steven/Applications/sonar-runner-2.3/bin/"
 
-# Sonar
-export PATH=${PATH}:"/Users/steven/Applications/sonarqube-4.1/bin/macosx-universal-64/"
-export PATH=${PATH}:"/Users/steven/Applications/sonar-runner-2.3/bin/"
-
-# Java home
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/"
+	export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/"
+fi
