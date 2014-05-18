@@ -73,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Added after suggestion from brew
-unalias run-help
+unalias run-help &>/dev/null
 autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
