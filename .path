@@ -7,7 +7,7 @@ if [[ `uname` == 'Linux' ]]	then
 fi
 
 # OS X path
-if [[ `uname` == 'Linux' ]]	then
+if [[ `uname` == 'Darwin' ]] then
 	export PATH=${PATH}:"/Applications/Android Studio.app/sdk/tools/":"/Applications/Android Studio.app/sdk/platform-tools/"
 	export PATH=${PATH}:"/Users/steven/Applications/eclipse/"
 	export PATH=${PATH}:"/Users/steven/Applications/sonarqube-4.1/bin/macosx-universal-64/"
