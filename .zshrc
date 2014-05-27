@@ -78,8 +78,8 @@ autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
 # Useful stuff from original dotfiles repo by mathiasbynens
-source .path
-source .exports
-source .aliases
-source .functions
-# source .extra
+source ~/.path
+source ~/.exports
+source ~/.aliases
+source ~/.functions
+# source ~/.extra
