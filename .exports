@@ -21,6 +21,8 @@ export MANPAGER="less -X"
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
 
+SBT_OPTS="-Dfile.encoding=UTF8 -Xmx2G -XX:MaxPermSize=2G -XX:+CMSClassUnloadingEnabled"
+
 # OS X specific paths
 if [[ `uname` == 'Darwin' ]] then
 	export JAVA_HOME=$(/usr/libexec/java_home)
