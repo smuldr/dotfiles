@@ -4,6 +4,7 @@
 install caskroom/cask/brew-cask
 tap caskroom/versions
 
+cask install alfred 2> /dev/null
 cask install dropbox 2> /dev/null
 cask install firefox 2> /dev/null
 cask install gimp 2> /dev/null
