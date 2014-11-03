@@ -3,14 +3,14 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
 # Ubuntu specific paths
 if [[ `uname` == 'Linux' ]]	then
-	# Android SDK paths
 	export PATH="$PATH:/opt/android-studio/sdk/platform-tools"
 	export PATH="$PATH:/opt/android-studio/sdk/tools"
 	export PATH="$PATH:/opt/android-studio/bin"
-	export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 fi
 
 # OS X specific paths
 if [[ `uname` == 'Darwin' ]] then
-	# nothing here
+	export PATH="$PATH:$HOME/android-sdk/platform-tools"
+	export PATH="$PATH:$HOME/android-sdk/tools"
+	export PATH="$PATH:$HOME/android-sdk/bin"
 fi
