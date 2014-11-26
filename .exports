@@ -28,4 +28,5 @@ if [[ `uname` == 'Darwin' ]] ; then
 	export JAVA_HOME=$(/usr/libexec/java_home)
 	# Link Homebrew casks in `/Applications` rather than `~/Applications`
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+	export ANDROID_HOME="${HOME}/android-sdk"
 fi
