@@ -25,12 +25,8 @@ export MANPAGER='less -X';
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
 
-export SBT_OPTS='-Dfile.encoding=UTF8 -XX:MaxPermSize=1024m -XX:+CMSClassUnloadingEnabled'
-
 # OS X specific paths
 if [[ `uname` == 'Darwin' ]] ; then
 	export JAVA_HOME=$(/usr/libexec/java_home)
-	# Link Homebrew casks in `/Applications` rather than `~/Applications`
-	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-	export ANDROID_HOME="${HOME}/android-sdk"
+	export ANDROID_HOME="${HOME}/android-sdk-macosx"
 fi
