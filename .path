@@ -1,16 +1,18 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
+OS_NAME=`uname`
+
 # Ubuntu specific paths
-if [[ `uname` == 'Linux' ]]	then
-	export PATH="$PATH:/opt/android-studio/sdk/platform-tools"
-	export PATH="$PATH:/opt/android-studio/sdk/tools"
-	export PATH="$PATH:/opt/android-studio/bin"
+if [ "$OS_NAME" = 'Linux' ]; then
+    export PATH="$PATH:/opt/android-studio/sdk/platform-tools"
+    export PATH="$PATH:/opt/android-studio/sdk/tools"
+    export PATH="$PATH:/opt/android-studio/bin"
 fi
 
 # OS X specific paths
-if [[ `uname` == 'Darwin' ]] then
-	export PATH="$PATH:$HOME/android-sdk-macosx/platform-tools"
-	export PATH="$PATH:$HOME/android-sdk-macosx/tools"
-	export PATH="$PATH:$HOME/android-sdk-macosx/bin"
+if [ "$OS_NAME" = 'Darwin' ]; then
+    export PATH="$PATH:$HOME/android-sdk-macosx/platform-tools"
+    export PATH="$PATH:$HOME/android-sdk-macosx/tools"
+    export PATH="$PATH:$HOME/android-sdk-macosx/bin"
 fi

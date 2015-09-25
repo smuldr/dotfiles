@@ -26,7 +26,8 @@ export MANPAGER='less -X';
 export GREP_OPTIONS='--color=auto';
 
 # OS X specific paths
-if [[ `uname` == 'Darwin' ]] ; then
-	export JAVA_HOME=$(/usr/libexec/java_home)
-	export ANDROID_HOME="${HOME}/android-sdk-macosx"
+OS_NAME=`uname`
+if [ "$OS_NAME" = 'Darwin' ] ; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+    export ANDROID_HOME="${HOME}/android-sdk-macosx"
 fi
