@@ -12,7 +12,7 @@ fi
 
 # OS X specific paths
 if [ "$OS_NAME" = 'Darwin' ]; then
-    export PATH="$PATH:$HOME/android-sdk-macosx/platform-tools"
-    export PATH="$PATH:$HOME/android-sdk-macosx/tools"
-    export PATH="$PATH:$HOME/android-sdk-macosx/bin"
+    export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+    export PATH="$PATH:$HOME/Library/Android/sdk/tools"
+    export PATH="$PATH:$HOME/Library/Android/sdk//bin"
 fi

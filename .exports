@@ -29,5 +29,5 @@ export GREP_OPTIONS='--color=auto';
 OS_NAME=`uname`
 if [ "$OS_NAME" = 'Darwin' ] ; then
     export JAVA_HOME=$(/usr/libexec/java_home)
-    export ANDROID_HOME="${HOME}/android-sdk-macosx"
+    export ANDROID_HOME="${HOME}/Library/Android/sdk"
 fi
