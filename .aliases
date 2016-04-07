@@ -142,3 +142,5 @@ alias reload="exec $SHELL -l"
 
 # update Homebrew
 alias broo='brew update && brew upgrade --all && brew cleanup -s'
+
+alias norig="find . -name '*.orig' | map rm"
