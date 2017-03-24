@@ -244,3 +244,30 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Docker
+export C_DOCKER_MACHINE=default
+alias dm=docker-machine
+alias dm-restart='docker-machine restart ${C_DOCKER_MACHINE}'
+alias dm-ip='docker-machine ip ${C_DOCKER_MACHINE}'
+alias d-del-exit='docker ps -q -f status=exited | xargs docker rm'
+alias d-del-dangling='docker rmi $(docker images -q --filter "dangling=true")'
+
+dm-init ()
+{
+    docker-machine start ${C_DOCKER_MACHINE};
+    dm-shell
+}
+
+dm-hosts ()
+{
+    DMHOSTNAME="docker";
+    sudo -v;
+    grep ${DMHOSTNAME} /etc/hosts > /dev/null && sudo sed -i '' "/${DMHOSTNAME}/d" /etc/hosts;
+    sudo echo "$(docker-machine ip ${C_DOCKER_MACHINE}) ${DMHOSTNAME}" | sudo tee -a /etc/hosts
+}
+
+dm-shell ()
+{
+    eval $(docker-machine env ${C_DOCKER_MACHINE})
+}
