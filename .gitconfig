@@ -96,6 +96,7 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
+	autocrlf = input
 
 [color]
 
@@ -122,10 +123,19 @@
 	changed = green
 	untracked = cyan
 
+[difftool "kaleidoscope"]
+
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+
+	prompt = false
+
 [diff]
 
 	# Detect copies as well as renames
 	renames = copies
+	tool = kaleidoscope
 
 [diff "bin"]
 	# Use `hexdump` to diff binary files
@@ -136,15 +146,25 @@
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
 
+[mergetool "kaleidoscope"]
+
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+
+[mergetool]
+
+	prompt = false
+
+[mergetool "studio"]
+
+	cmd = studio merge "$REMOTE" "$BASE" "$MERGED"
+	trustExitCode = true
+
 [merge]
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-	tool = p4merge
-[mergetool "p4merge"]
-	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	trustExitCode = false
-	keepBackup = false
+	tool = kaleidoscope
 
 [push]
 
