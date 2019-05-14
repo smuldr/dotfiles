@@ -6,6 +6,7 @@ OS_NAME=`uname`
 # Ubuntu specific paths
 if [ "$OS_NAME" = 'Linux' ]; then
     export PATH="$PATH:/opt/android-studio/sdk/platform-tools"
+    export PATH="$PATH:/opt/android-studio/sdk/emulator"
     export PATH="$PATH:/opt/android-studio/sdk/tools"
     export PATH="$PATH:/opt/android-studio/sdk/tools/bin"
     export PATH="$PATH:/opt/android-studio/bin"
@@ -14,7 +15,8 @@ fi
 # OS X specific paths
 if [ "$OS_NAME" = 'Darwin' ]; then
     export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+    export PATH="$PATH:$HOME/Library/Android/sdk/emulator"
     export PATH="$PATH:$HOME/Library/Android/sdk/tools"
     export PATH="$PATH:$HOME/Library/Android/sdk/tools/bin"
-    export PATH="$PATH:$HOME/Library/Android/sdk/bin"
+    export PATH="$HOME/.fastlane/bin:$PATH"
 fi
