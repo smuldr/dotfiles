@@ -22,8 +22,9 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install zsh.
+# Install zsh and oh-my-zsh.
 brew install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Switch to using brew-installed zsh as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
