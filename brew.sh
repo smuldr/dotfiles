@@ -54,5 +54,9 @@ brew install httpie
 brew install imagemagick --with-webp
 brew install tree
 
+# Pretty fonts
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+
 # Remove outdated versions from the cellar.
 brew cleanup
