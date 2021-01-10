@@ -39,6 +39,9 @@ brew install wget --with-iri
 brew install gnupg
 brew cask install gpg-suite-no-mail
 
+brew cask install adoptopenjdk8
+brew cask install adoptopenjdk11
+
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
 brew install grep
