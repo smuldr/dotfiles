@@ -154,3 +154,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias broo='brew update && brew upgrade && brew cask upgrade && brew cleanup -s'
 
 alias gw='./gradlew'
+
+# Switch between JDK versions.
+alias j8='unset JAVA_HOME; export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version'
+alias j11='unset JAVA_HOME; export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version'
