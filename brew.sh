@@ -35,13 +35,13 @@ fi;
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
+# Install Temurin JDK
+brew tap homebrew/cask-versions
+brew install --cask temurin
+
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 brew cask install gpg-suite-no-mail
-
-# Install OpenJDK.
-brew tap homebrew/cask-versions
-brew install --cask temurin11
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
