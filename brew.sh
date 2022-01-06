@@ -40,7 +40,6 @@ brew tap homebrew/cask-versions
 brew install --cask temurin
 
 # Install GnuPG to enable PGP-signing commits.
-brew install gnupg
 brew cask install gpg-suite-no-mail
 
 # Install more recent versions of some macOS tools.
