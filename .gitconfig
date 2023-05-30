@@ -107,6 +107,7 @@
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
+	autocrlf = input
 
 [color]
 
@@ -138,19 +139,15 @@
 	# https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true
 
-[difftool "kaleidoscope"]
+[credential]
 
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
-[difftool]
-
-	prompt = false
+	helper = osxkeychain
 
 [diff]
 
 	# Detect copies as well as renames
 	renames = copies
-	tool = kaleidoscope
+
 
 [diff "bin"]
 
@@ -162,14 +159,9 @@
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
 
-[mergetool "kaleidoscope"]
+[init]
 
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-
-[mergetool]
-
-	prompt = false
+	defaultBranch = main
 
 [mergetool "studio"]
 
@@ -180,7 +172,11 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-	tool = kaleidoscope
+	tool = studio
+
+[pull]
+
+	ff = only
 
 [push]
 
@@ -188,6 +184,7 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	autoSetupRemote = true
 
 # URL shorthands
 
@@ -212,5 +209,7 @@
 	insteadOf = "gist:"
 
 [user]
+
 	email = steven.mulder@gmail.com
 	name = Steven Mulder
+	signingkey = 5B2157118E7AAAE6A50038B99C4464455D019245
