@@ -54,6 +54,8 @@ brew install gmp
 brew install ack
 brew install git
 brew install httpie
+brew install git-lfs
+brew install gs
 brew install imagemagick --with-webp
 brew install tree
 
