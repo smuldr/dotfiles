@@ -148,7 +148,7 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Update Homebrew packages.
-alias broo='brew update && brew upgrade && brew cask upgrade && brew cleanup -s'
+alias broo='brew update && brew upgrade && brew upgrade --cask && brew cleanup -s'
 
 alias gw='./gradlew'
 
