@@ -36,6 +36,6 @@ export GPG_TTY=$(tty);
 # OS X specific paths
 OS_NAME=`uname`
 if [ "$OS_NAME" = 'Darwin' ] ; then
-    export JAVA_HOME=$(/usr/libexec/java_home)
+    export JAVA_HOME=$(/usr/libexec/java_home -v21)
     export ANDROID_HOME="${HOME}/Library/Android/sdk"
 fi
