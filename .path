@@ -20,5 +20,9 @@ if [ "$OS_NAME" = 'Darwin' ]; then
     export PATH="$PATH:$HOME/Library/Android/sdk/emulator"
     export PATH="$PATH:$HOME/Library/Android/sdk/tools"
     export PATH="$PATH:$HOME/Library/Android/sdk/tools/bin"
-    export PATH="$HOME/.fastlane/bin:$PATH"
+fi
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
 fi
