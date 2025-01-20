@@ -21,7 +21,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install zsh and oh-my-zsh.
 brew install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -33,17 +33,17 @@ if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install Temurin JDK
 brew tap homebrew/cask-versions
 brew install --cask temurin
 
 # Install GnuPG to enable PGP-signing commits.
-brew cask install gpg-suite-no-mail
+brew install --cask gpg-suite-no-mail
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install screen
@@ -53,15 +53,16 @@ brew install gmp
 # Install other useful binaries.
 brew install ack
 brew install git
-brew install httpie
 brew install git-lfs
-brew install gs
-brew install imagemagick --with-webp
+brew install httpie
+brew install imagemagick
 brew install tree
 
 # Pretty fonts
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
+brew install --cask font-fira-code
+
+brew install --cask sublime-text
 
 # Remove outdated versions from the cellar.
 brew cleanup
